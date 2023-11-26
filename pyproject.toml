@@ -1,0 +1,12 @@
+[tool.black]
+line-length = 120
+target-version = ['py310', 'py311']
+#include = '\.pyi?$'
+skip_magic_trailing_comma = true
+
+[tool.flake8]
+exclude = ['tests', 'venv', 'deploy', 'tmp_*.py']
+ignore = ['W503', 'E203', 'C901']
+max-complexity = 10
+max-line-length = 120
+# noqa 'F401' - игнорирование строки
