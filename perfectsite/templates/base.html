@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Animals</title>
+    <title>Animals {% block title %} {% endblock title %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
@@ -62,18 +62,17 @@
     <script src="{% static 'js/main.js' %}"></script>
     <script>
         $('#datepicker').datepicker({
-            iconsLibrary: 'fontawesome',
-            disableDaysOfWeek: [0, 0],
-        //     icons: {
-        //      rightIcon: '<span class="fa fa-caret-down"></span>'
-        //  }
-        });
+    iconsLibrary: 'fontawesome',
+    disableDaysOfWeek: [0, 0],
+    icons: {
+        rightIcon: '<span class="fa fa-caret-down"></span>'
+        }
+    });
         $('#datepicker2').datepicker({
             iconsLibrary: 'fontawesome',
             icons: {
              rightIcon: '<span class="fa fa-caret-down"></span>'
          }
-
         });
         var timepicker = $('#timepicker').timepicker({
          format: 'HH.MM'

@@ -1,3 +1,5 @@
+{% load static %}
+
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900|Roboto:100,100i,300,400,400i,500,500i,700,900&display=swap");
 /* 1. Theme default css */
 /* line 4, ../../Arafath/CL/CL september/205. Barber/HTML/scss/reset.scss */
@@ -175,17 +177,17 @@ h3 {
 
 /* line 131, ../../Arafath/CL/CL september/205. Barber/HTML/scss/reset.scss */
 .bg-img-1 {
-  background-image: url(../img/slider/slider-img-1.jpg);
+  background-image: url('/static/img/slider/slider-img-1.jpg');
 }
 
 /* line 134, ../../Arafath/CL/CL september/205. Barber/HTML/scss/reset.scss */
 .bg-img-2 {
-  background-image: url(../img/background-img/bg-img-2.jpg);
+  background-image: url('/static/img/background-img/bg-img-2.jpg');
 }
 
 /* line 137, ../../Arafath/CL/CL september/205. Barber/HTML/scss/reset.scss */
 .cta-bg-1 {
-  background-image: url(../img/background-img/bg-img-3.jpg);
+  background-image: url('/static/img/background-img/bg-img-3.jpg');
 }
 
 /* line 142, ../../Arafath/CL/CL september/205. Barber/HTML/scss/reset.scss */

@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,700|Poppins:200,200i,300,300i,400,500,500i,600,700,800,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,700|Poppins:200,200i,300,300i,400,500,500i,600,700,800,900&display=swap");
+
+#navigation li.active a {
+  color: rgb(235, 89, 45);
+}
 /* line 1, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_extend.scss */
 .flex-center-start {
   display: -webkit-box;
@@ -205,17 +209,17 @@ h3 {
 
 /* line 128, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_reset.scss */
 .bg-img-1 {
-  background-image: url(../img/slider/slider-img-1.jpg);
+  background-image: url("/static/img/slider/slider-img-1.jpg");
 }
 
 /* line 131, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_reset.scss */
 .bg-img-2 {
-  background-image: url(../img/background-img/bg-img-2.jpg);
+  background-image: url("/static/img/background-img/bg-img-2.jpg");
 }
 
 /* line 134, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_reset.scss */
 .cta-bg-1 {
-  background-image: url(../img/background-img/bg-img-3.jpg);
+  background-image: url("/static/img/background-img/bg-img-3.jpg");
 }
 
 /* line 139, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_reset.scss */
@@ -1326,7 +1330,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+  background-image: url("/static/img/ban/banner.png");
 }
 
 /* line 4, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_slider.scss */
@@ -1665,8 +1669,10 @@ h3 {
     position: absolute;
     right: 0;
     bottom: 0;
-    border-top: 15px solid #ffffff;
-    border-left: 15px solid #ffffff;
+    border-top: 15px solid
+ #ffffff;
+    border-left: 15px solid
+ #ffffff;
     top: auto;
     width: 50%;
     height: 60%;
@@ -1701,7 +1707,7 @@ h3 {
   left: 0;
   top: 0;
   content: '';
-  background-image: url(../img/banner/prise_bg.png);
+  background-image: url("/static/img/ban/prise_bg.png");
   height: 100%;
   width: 100%;
   opacity: .04;
@@ -1865,7 +1871,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_service.scss */
 .service_icon_bg_1 {
-  background-image: url(../img/service/service_icon_bg_1.png);
+  background-image: url("/static/img/service/service_icon_bg_1.png");
 }
 
 /* line 4, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_service.scss */
@@ -2964,17 +2970,17 @@ h3 {
 
 /* line 1, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_bradcam.scss */
 .breadcam_bg {
-  background-image: url(../img/banner/bradcam.png);
+  background-image: url("/static/img/ban/bradcam.png");
 }
 
 /* line 4, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_bradcam.scss */
 .breadcam_bg_1 {
-  background-image: url(../img/banner/bradcam2.png);
+  background-image: url("/static/img/ban/bradcam.png");
 }
 
 /* line 7, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_bradcam.scss */
 .breadcam_bg_2 {
-  background-image: url(../img/banner/bradcam3.png);
+  background-image: url("/static/img/ban/bradcam.png");
 }
 
 /* line 10, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_bradcam.scss */
@@ -3346,7 +3352,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_anipat.scss */
 .anipat_bg_1 {
-  background-image: url(../img/banner/contact_bg.png);
+  background-image: url("/static/img/ban/contact_bg.png");
 }
 
 /* line 5, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_anipat.scss */
@@ -4514,7 +4520,7 @@ h6 {
 
 /* line 798, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_elements.scss */
 .primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
+  background: url("/static/img/elements/primary-check.png") no-repeat center center/cover;
   border: none;
 }
 
@@ -4556,7 +4562,7 @@ h6 {
 
 /* line 835, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_elements.scss */
 .confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
+  background: url("/static/img/elements/success-check.png") no-repeat center center/cover;
   border: none;
 }
 
@@ -4604,7 +4610,7 @@ h6 {
 
 /* line 876, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_elements.scss */
 .disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
+  background: url("/static/img/elements/disabled-check.png") no-repeat center center/cover;
   border: none;
 }
 
@@ -4646,7 +4652,7 @@ h6 {
 
 /* line 913, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_elements.scss */
 .primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
+  background: url("/static/img/elements/primary-radio.png") no-repeat center center/cover;
   border: none;
 }
 
@@ -4688,7 +4694,7 @@ h6 {
 
 /* line 950, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_elements.scss */
 .confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
+  background: url("/static/img/elements/success-radio.png") no-repeat center center/cover;
   border: none;
 }
 
@@ -4736,7 +4742,7 @@ h6 {
 
 /* line 991, ../../Arafath/CL/january 2020/240. Animal/HTML/scss/_elements.scss */
 .disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
+  background: url("/static/img/elements/disabled-radio.png") no-repeat center center/cover;
   border: none;
 }
 
