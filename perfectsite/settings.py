@@ -1,5 +1,6 @@
-from pathlib import Path
 import os
+from pathlib import Path
+
 from dotenv import load_dotenv
 
 
@@ -18,8 +19,12 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+HTML_MINIFY = True
+KEEP_COMMENTS_ON_MINIFYING = False
 
+
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.8', '.pythonanywhere.com', 'jannikk666.com']
+CSRF_TRUSTED_ORIGINS = ["https://jannikk666.com"]
 
 
 # Application definition
@@ -42,6 +47,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'htmlmin.middleware.HtmlMinifyMiddleware',
+    'htmlmin.middleware.MarkRequestMiddleware',
 ]
 
 ROOT_URLCONF = 'perfectsite.urls'

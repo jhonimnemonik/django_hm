@@ -11,8 +11,38 @@ class ContactForms (forms.Form):
                 "placeholder": "Enter your name"
             }
         )
-
     )
-    email = forms.EmailField()
-    subject = forms.CharField()
-    message = forms.CharField(widget=forms.Textarea())
+    email = forms.EmailField(
+        label="Your email",
+        widget=forms.TextInput(
+            attrs={
+                "id": "email",
+                "class": "form-control valid",
+                "placeholder": "Enter your email"
+            }
+        )
+    )
+    subject = forms.CharField(
+        label="Subject",
+        widget=forms.TextInput(
+            attrs={
+                "id": "subject",
+                "class": "form-control",
+                "placeholder": "Enter subject"
+            }
+        )
+    )
+    message = forms.CharField(
+        label="Message",
+        widget=forms.Textarea(
+            attrs={
+                "id": "message",
+                "class": "form-control w-100",
+                "placeholder": "Your message",
+                "cols": "30",
+                "rows": "9",
+                "onfocus": "this.placeholder = ''",
+                "onblur": "this.placeholder = 'Enter message'",
+            }
+        )
+    )
