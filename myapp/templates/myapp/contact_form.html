@@ -3,6 +3,7 @@
     <div class="col-12">
         <h2 class="contact-title">Get in Touch</h2>
     </div>
+    {% include 'myapp/error.html' %}
     <div class="col-lg-8">
         <form class="form-contact contact_form" action="{% url 'contact' %}" method="post">
             {% csrf_token %}
@@ -14,7 +15,7 @@
                     {% if input.name == 'message' or input.name == 'subject' %}
                     <div class="col-12">{% endif %}
                         <div class="form-group">
-                            <label for="{{ input.name }}">{{ input.label }}</label>
+                            <label for="{{ input.widget.id }}">{{ input.label }}</label>
                             {{ input }}
                         </div>
                     </div>
@@ -31,21 +32,21 @@
         <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-home"></i></span>
             <div class="media-body">
-                <h3>Buttonwood, California.</h3>
-                <p>Rosemead, CA 91770</p>
+                <h3>New York NY , USA.</h3>
+                <p>239 E 5th St, 10003</p>
             </div>
         </div>
         <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-tablet"></i></span>
             <div class="media-body">
-                <h3>+1 253 565 2365</h3>
-                <p>Mon to Fri 9am to 6pm</p>
+                <h3>+555 0000 565</h3>
+                <p>Mon - Sat 10:00am - 7:00pm</p>
             </div>
         </div>
         <div class="media contact-info">
             <span class="contact-info__icon"><i class="ti-email"></i></span>
             <div class="media-body">
-                <h3>support@colorlib.com</h3>
+                <h3>Demomail@gmail.Com</h3>
                 <p>Send us your query anytime!</p>
             </div>
         </div>

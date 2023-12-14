@@ -1,4 +1,5 @@
 from django import forms
+from myapp.models import Message
 
 
 class ContactForms (forms.Form):
@@ -46,3 +47,10 @@ class ContactForms (forms.Form):
             }
         )
     )
+
+    def save(self, commit=True):
+        data = self.cleaned_data
+        msg = Message(**data)
+        if commit:
+            return msg.save()
+        return msg
