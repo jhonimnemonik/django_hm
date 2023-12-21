@@ -1,8 +1,32 @@
+<!--{% if messages %}-->
+<!--<div class="col-12 error">-->
+<!--    <ul class="messages">-->
+<!--        {% for message in messages %}-->
+<!--            <li{% if message.tags %} class="{{ message.tags }}{% if form.errors %}-->
+<!--    <ul class="errorlist">-->
+<!--        {% for field, errors in form.errors.items %}-->
+<!--            {% for error in errors %}-->
+<!--                <li>{{ formfield.label }} {{ error }}</li>-->
+<!--            {% endfor %}-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--{% endif %}{% endif %}{{ message }}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--{% endif %}-->
+
 {% if messages %}
 <div class="col-12 error">
     <ul class="messages">
         {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}{% if form.errors %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% if form.errors %}
+<div class="col-12 error">
     <ul class="errorlist">
         {% for field, errors in form.errors.items %}
             {% for error in errors %}
@@ -10,9 +34,7 @@
             {% endfor %}
         {% endfor %}
     </ul>
-{% endif %}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
+</div>
 {% endif %}
 
 
