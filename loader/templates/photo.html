@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Load photo{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Загрузить изображение</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="{% url 'photo_load' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="file" class="form-label">Выбрать файл</label>
+                            <input type="file" class="form-control" id="file" name="file" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Загрузить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
