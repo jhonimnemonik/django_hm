@@ -58,7 +58,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'verbose_name': 'Фотография',
-                'verbose_name_plural': 'ФотоГрафии',
+                'verbose_name_plural': 'Фотографии',
                 'db_table': 'photos',
             },
         ),

@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-
 from dotenv import load_dotenv
 
 
@@ -23,8 +22,8 @@ HTML_MINIFY = True
 KEEP_COMMENTS_ON_MINIFYING = False
 
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.8', '.pythonanywhere.com', 'jannikk666.com']
-CSRF_TRUSTED_ORIGINS = ["https://jannikk666.com"]
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+# CSRF_TRUSTED_ORIGINS = []
 
 
 # Application definition
@@ -106,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-eu'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Europe/Warsaw'
 
@@ -120,6 +119,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 MEDIA_ROOT = BASE_DIR / 'perfectsite' / 'media'
+MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 if DEBUG:

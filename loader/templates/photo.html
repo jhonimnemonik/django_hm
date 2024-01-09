@@ -12,18 +12,31 @@
                 <div class="card-body">
                     <form method="post" action="{% url 'photo_load' %}" enctype="multipart/form-data">
                         {% csrf_token %}
-                        <div class="mb-3">
-                            <label for="file" class="form-label">Выбрать файл</label>
-                            <input type="file" class="form-control" id="file" name="file" required>
+                        <div class="mb-3 text-center">
+                            {{ form }}
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Загрузить</button>
-                        </div>
+                        <div class="form-group mt-3 text-center">
+                        <button
+                                type="submit"
+                                class="button button-contactForm boxed-btn">Загрузить</button>
+                    </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<!--<div class="text-center">-->
+<!--    <h1>Add Pet</h1>-->
+
+<!--    <form method="post" enctype="multipart/form-data">-->
+<!--        {% csrf_token %}-->
+<!--        {{ pet_form.as_p }}-->
+<!--        {{ photo_form.as_p }}-->
+<!--        <button type="submit">Submit</button>-->
+<!--    </form>-->
+<!--</div>-->
 
 {% endblock content %}

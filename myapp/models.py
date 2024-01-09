@@ -13,7 +13,7 @@ class Message(models.Model):
                 message="Минимальная длина имени - 3 символа"
             ),
             RegexValidator(
-                regex='^[a-zA-Zа-яА-Я]+$',
+                regex='^[a-zA-Zа-яА-Я\s]+$',
                 message='Имя должно содержать только буквы.',
                 code='invalid_name'
             )
@@ -29,6 +29,6 @@ class Message(models.Model):
         db_table = "messages"
         verbose_name = "Сообщение"
         verbose_name_plural = "Сообщения"
-    #
-    # def __str__(self):
-    #     return self.name
+
+    def __str__(self):
+        return self.name

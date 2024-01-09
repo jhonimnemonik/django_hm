@@ -5,7 +5,6 @@ from myapp.forms import ContactForms
 
 
 def main(request):
-    # request.session.get()
     return render(request, 'home.html', {"page": "home"})
 
 
