@@ -2,19 +2,23 @@
 {% block title %}Pets{% endblock title %}
 
 {% block main_info%}
+{% for image in images %}
+<img src="{{image.preview.url" alt="">
+{% endfor %}
 
-   <h2 class="text-center">Список Животных</h2>
+   <h2 class="text-center">Список животных:</h2>
 
 {% for pet in data_from_db %}
-<!--        <div class="row">-->
 <div class="container">
-            <h3>Имя: {{ pet.name }}</h3>
+            <h2>{{ pet.name }}</h2>
+            {% for photo in pet.photos.all %}
+            <img src="{{ photo.middle.url }}" alt="{{ pet.name }} Photo" style="max-width: 300px; max-height: 300px;">
+            {% endfor %}
             <p><strong>Вид:</strong> {{ pet.get_type_pet_display }}</p>
             <p><strong>Порода:</strong> {{ pet.breed }}</p>
             <p><strong>Дата рождения:</strong> {{ pet.birth_date }}</p>
             <p><strong>Пол:</strong> {% if pet.is_male %}Кабель{% else %}Девочка{% endif %}</p>
-<!--            <img src="{{ pet.photo.url }}" alt="{{ pet.name }} Photo" style="max-width: 300px; max-height: 300px;">-->
-            <img src="{{ MEDIA_URL }}{{ pet.photo.url|urlencode }}" alt="{{ pet.name }} Photo"style="max-width: 300px; max-height: 300px;">
+
             <p><strong>Описание:</strong> {{ pet.description }}</p>
 
             {% with pet_nursery=pet.nursery %}

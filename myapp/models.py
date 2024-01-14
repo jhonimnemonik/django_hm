@@ -8,16 +8,11 @@ class Message(models.Model):
         max_length=25,
         verbose_name="Имя",
         validators=[
-            MinLengthValidator(
-                limit_value=3,
-                message="Минимальная длина имени - 3 символа"
-            ),
+            MinLengthValidator(limit_value=3, message="Минимальная длина имени - 3 символа"),
             RegexValidator(
-                regex='^[a-zA-Zа-яА-Я\s]+$',
-                message='Имя должно содержать только буквы.',
-                code='invalid_name'
-            )
-        ]
+                regex="^[a-zA-Zа-яА-Я\s]+$", message="Имя должно содержать только буквы.", code="invalid_name"
+            ),
+        ],
     )
     email = models.EmailField(verbose_name="Почта")
     subject = models.CharField(max_length=50, verbose_name="Тема")

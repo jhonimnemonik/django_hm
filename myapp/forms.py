@@ -2,36 +2,18 @@ from django import forms
 from myapp.models import Message
 
 
-class ContactForms (forms.Form):
+class ContactForms(forms.Form):
     name = forms.CharField(
         label="Full name",
-        widget=forms.TextInput(
-            attrs={
-                "id": "name",
-                "class": "form-control valid",
-                "placeholder": "Enter your name"
-            }
-        )
+        widget=forms.TextInput(attrs={"id": "name", "class": "form-control valid", "placeholder": "Enter your name"}),
     )
     email = forms.EmailField(
         label="Your email",
-        widget=forms.TextInput(
-            attrs={
-                "id": "email",
-                "class": "form-control valid",
-                "placeholder": "Enter your email"
-            }
-        )
+        widget=forms.TextInput(attrs={"id": "email", "class": "form-control valid", "placeholder": "Enter your email"}),
     )
     subject = forms.CharField(
         label="Subject",
-        widget=forms.TextInput(
-            attrs={
-                "id": "subject",
-                "class": "form-control",
-                "placeholder": "Enter subject"
-            }
-        )
+        widget=forms.TextInput(attrs={"id": "subject", "class": "form-control", "placeholder": "Enter subject"}),
     )
     message = forms.CharField(
         label="Message",
@@ -45,7 +27,7 @@ class ContactForms (forms.Form):
                 "onfocus": "this.placeholder = ''",
                 "onblur": "this.placeholder = 'Enter message'",
             }
-        )
+        ),
     )
 
     def save(self, commit=True):
